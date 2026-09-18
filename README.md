@@ -1,5 +1,7 @@
 # 文旅知识库摄取与多视角生成 Skill
 
+[中文](README.md) ｜ [English](README_EN.md) ｜ [English Operations Manual](docs/OPERATIONS.md)
+
 把零散的文旅史料（老照片 / 导览图 / 文献截图 / 口述史 / PDF / 网页）**编译**成一份可持续生长的 Markdown Wiki，并为每条知识生成 **儿童 / 历史 / 专家** 三种视角的解读。
 
 方法论来自 Andrej Karpathy 的 [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f#llm-wiki)：
@@ -76,7 +78,7 @@ wiki/
 根目录的 `SKILL.md` 符合 Anthropic Skills 规范，可直接打包上传：
 
 ```bash
-zip -r 文旅知识库摄取与多视角生成-Skill.zip SKILL.md references/ assets/ scripts/
+zip -r 文旅知识库摄取与多视角生成-Skill.zip SKILL.md references/ assets/ scripts/ docs/
 ```
 
 上传至 Dify → Agent → 技能，并在系统提示词中加入触发语。细节见 `references/dify-integration.md`（含图片方案、沙箱持久化、Chatflow 衔接、成本控制、试点验收清单）。
@@ -86,6 +88,8 @@ zip -r 文旅知识库摄取与多视角生成-Skill.zip SKILL.md references/ as
 | 路径 | 内容 |
 |---|---|---|
 | `SKILL.md` | 主入口：三层架构、命令路由、摄取流程、七条硬规则 |
+| `README.md` / `README_EN.md` | 中文 / 英文介绍 |
+| `docs/OPERATIONS.md` | **英文操作手册**：安装、摄取流程、合并规则、脚本、Dify 集成、故障排查 |
 | `references/schema.md` | 分类法、frontmatter 字段、命名、溯源纪律、图片与链接规范 |
 | `references/lenses.md` | 三视角生成规范与一致性自检 |
 | `references/ingest-workflow.md` | 摄取七步、合并决策树、幂等、批量策略 |
